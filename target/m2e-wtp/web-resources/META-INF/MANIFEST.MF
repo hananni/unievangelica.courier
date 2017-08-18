@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Implementation-Title: unievangelica.courier
+Implementation-Version: 2017.02.21
+Built-By: Lucas
+Implementation-Vendor-Id: br.com.unievangelica.courier
+Build-Jdk: 1.8.0_101
+Implementation-URL: http://projects.spring.io/spring-boot/unievangelic
+ a.courier/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+Main-Class: com.mkyong.NewSpringBootWebApplicationForWAR
+
