@@ -100,13 +100,6 @@
 
 		<!-- Oracle JDBC driver -->
 
-		<dependency>
-			<groupId>com.oracle.jdbc</groupId>
-			<artifactId>ojdbc7</artifactId>
-			<version>12.1.0.2</version>
-			<scope>system</scope>
-			<systemPath>${basedir}/lib/ojdbc7.jar</systemPath>
-		</dependency>
 
 		<dependency>
 			<groupId>org.scala-lang</groupId>
@@ -148,29 +141,6 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-install-plugin</artifactId>
-				<version>2.3.1</version>
-				<executions>
-					<execution>
-						<id>install-oracle-jdbc</id>
-						<goals>
-							<goal>install-file</goal>
-						</goals>
-						<phase>clean</phase>
-						<configuration>
-							<groupId>com.oracle</groupId>
-							<artifactId>ojdbc7</artifactId>
-							<version>12.1.0.2</version>
-							<packaging>jar</packaging>
-							<generatePom>true</generatePom>
-							<createChecksum>true</createChecksum>
-							<file>${basedir}/lib/ojdbc7.jar</file>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
 
 		</plugins>
 	</build>

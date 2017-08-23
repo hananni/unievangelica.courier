@@ -1,7 +1,9 @@
 package br.com.unievangelica.courier;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.thymeleaf.ThymeleafProperties;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 
@@ -16,5 +18,10 @@ public class Application extends SpringBootServletInitializer {
     protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
         return builder.sources(Application.class);
     }
+	
+	@Autowired
+	public void disableTemplateLocationCheck(ThymeleafProperties properties) {
+	    properties.setCheckTemplate(false);
+	    }
 	
 }
