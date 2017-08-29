@@ -1,0 +1,46 @@
+  <!-- Logout Modal -->
+    <div class="modal fade" id="modal_produto" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Cadastrar Produto</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+          <form class="form-horizontal">
+            <div class="form-group row">
+			  <label for="example-text-input" class="col-2 col-form-label">Código</label>
+			  <div class="col-10">
+			    <input class="form-control" type="text"  ng-model="produto.id">
+			  </div>
+			</div>
+			<div class="form-group row">
+			  <label for="example-search-input" class="col-2 col-form-label">Nome</label>
+			  <div class="col-10">
+			    <input class="form-control" type="text" ng-model="produto.nome">
+			  </div>
+			</div>
+			<div class="form-group row">
+			  <label for="example-email-input" class="col-2 col-form-label">Preço</label>
+			  <div class="col-10">
+			    <input class="form-control" type="text"  ng-model="produto.preco" >
+			  </div>
+			</div>
+			<div class="form-group row">
+			  <label for="example-email-input" class="col-2 col-form-label">Descrição</label>
+			  <div class="col-10">
+			    <input class="form-control" type="text"  ng-model="produto.descricao">
+			  </div>
+			</div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            <button class="btn btn-primary" ng-click="salvar(produto)" data-backdrop="false">Salvar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+   

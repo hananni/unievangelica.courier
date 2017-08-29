@@ -21,6 +21,8 @@ public interface HibernateUtil<T, ID extends Serializable> {
 	
 	public List<T> findAll(Object ... criterion);
 	
+	public List<T> findAll();
+	
 	public List<? extends T> findByQuery(String query, Hashtable<String, Object> params);
 	
 	public void save(T entity);

@@ -1,6 +1,7 @@
 package br.com.unievangelica.courier.controller;
 
 import java.io.Serializable;
+import java.util.List;
 
 import org.springframework.http.ResponseEntity;
 
@@ -15,6 +16,8 @@ public interface GenericController <T, ID extends Serializable>{
 //	ResponseEntity<T> delete(Long id);
 
 	ResponseEntity<T> findById(Integer id);
+	
+	List<?> findAll();
 
 	
 

@@ -294,5 +294,10 @@ public class HibernateUtilImpl<T, ID extends Serializable> implements HibernateU
 			throw re;
 		}
 	}
+	
+	   @SuppressWarnings("unchecked")
+	    public List<T> findAll() {
+	            return entityManager.createQuery("Select t from " + persistedClass.getSimpleName() + " t").getResultList();
+	    }
 
 }

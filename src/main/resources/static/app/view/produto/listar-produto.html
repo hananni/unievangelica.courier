@@ -1,7 +1,155 @@
-<html>
-	<head>
-	</head>
-	<body>
-	<h6>{{hello}}</h6>
-	</body>
-</html>
+
+  <body class="fixed-nav" id="page-top">
+	
+   	<div ng-include="'app/view/header.html'"></div>
+
+   	
+    <div class="content-wrapper py-3" >
+
+      <div class="container-fluid">
+      
+      <div class="row">
+          <div class="col-xl-3 col-sm-6 mb-3">
+            <div class="card text-white bg-primary o-hidden h-100">
+              <div class="card-body">
+                <div class="card-body-icon">
+                  <i class="fa fa-fw fa-comments"></i>
+                </div>
+                <div class="mr-5">
+                  26 New Messages!
+                </div>
+              </div>
+              <a href="#" class="card-footer text-white clearfix small z-1">
+                <span class="float-left">View Details</span>
+                <span class="float-right">
+                  <i class="fa fa-angle-right"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6 mb-3">
+            <div class="card text-white bg-warning o-hidden h-100">
+              <div class="card-body">
+                <div class="card-body-icon">
+                  <i class="fa fa-fw fa-list"></i>
+                </div>
+                <div class="mr-5">
+                  11 New Tasks!
+                </div>
+              </div>
+              <a href="#" class="card-footer text-white clearfix small z-1">
+                <span class="float-left">View Details</span>
+                <span class="float-right">
+                  <i class="fa fa-angle-right"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6 mb-3">
+            <div class="card text-white bg-success o-hidden h-100">
+              <div class="card-body">
+                <div class="card-body-icon">
+                  <i class="fa fa-fw fa-shopping-cart"></i>
+                </div>
+                <div class="mr-5">
+                  123 New Orders!
+                </div>
+              </div>
+              <a href="#" class="card-footer text-white clearfix small z-1">
+                <span class="float-left">View Details</span>
+                <span class="float-right">
+                  <i class="fa fa-angle-right"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6 mb-3">
+            <div class="card text-white bg-danger o-hidden h-100">
+              <div class="card-body">
+                <div class="card-body-icon">
+                  <i class="fa fa-fw fa-support"></i>
+                </div>
+                <div class="mr-5">
+                  13 New Tickets!
+                </div>
+              </div>
+              <a href="#" class="card-footer text-white clearfix small z-1">
+                <span class="float-left">View Details</span>
+                <span class="float-right">
+                  <i class="fa fa-angle-right"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Breadcrumbs -->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="#">Produto</a>
+          </li>
+          <li class="breadcrumb-item active">Lista de Produtos</li>
+        </ol>
+
+        <div class="row">
+        <div class="col-sm-12">
+        	          <button class="btn btn-primary pull-right" data-toggle="modal" data-target="#modal_produto" ng-click="cadastrarProduto()" data-backdrop="static">Cadastrar Produto</button>
+        </div>
+        </div>
+
+
+        <!-- Example Tables Card -->
+        <div class="card mb-3 mt-3" >
+     
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered dataTable" width="100%" id="dataTable" cellspacing="0">
+                <thead>
+                  <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Descrição</th>
+                    <th>Preço</th>
+                  </tr>
+                </thead>
+                	<tbody>
+						<tr ng-repeat="produto in produtos" on-finish-render="ngRepeatFinished">
+							
+							<td>{{produto.id}}</td>
+							<td>{{produto.nome}}</td>
+							<td>{{produto.descricao}}</td>
+							<td>{{produto.preco}}</td>
+							
+						</tr>
+					</tbody>
+              </table>
+            </div>
+          </div>
+          <div class="card-footer small text-muted">
+            Updated yesterday at 11:59 PM
+          </div>
+        </div>
+
+      </div>
+      <!-- /.container-fluid -->
+
+    </div>
+    <!-- /.content-wrapper -->
+
+   <div ng-include="'app/view/produto/cadastrar-produto.html'"></div>
+   
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="app/vendor/jquery/jquery.min.js"></script>
+    <script src="app/vendor/popper/popper.min.js"></script>
+    <script src="app/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="app/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="app/vendor/chart.js/Chart.min.js"></script>
+    <script src="app/vendor/datatables/jquery.dataTables.js"></script>
+    <script src="app/vendor/datatables/dataTables.bootstrap4.js"></script>
+
+    <!-- Custom scripts for this template -->
+
+  </body>

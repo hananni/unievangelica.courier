@@ -1,6 +1,7 @@
 package br.com.unievangelica.courier.controller;
 //package br.com.unievangelica.courier.controllers;
 import java.io.Serializable;
+import java.util.List;
 
 import javax.validation.Valid;
 
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import br.com.unievangelica.courier.service.GenericServiceImpl;
 
@@ -64,6 +66,15 @@ public class GenericControllerImpl<T, ID extends Serializable> implements Generi
 	public ResponseEntity<T> findById(@PathVariable Integer id){
 		return new ResponseEntity<>(service.findById(id), HttpStatus.OK);
 	}
+	
+	@Override
+	@RequestMapping(method=RequestMethod.GET, value="/buscarTodos",produces=MediaType.APPLICATION_JSON_VALUE)
+	public  List<?> findAll(){
+		
+		return service.findAll();
+	}
+	
+	
 
 	
 

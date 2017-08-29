@@ -118,6 +118,12 @@ public class GenericServiceImpl<T, ID extends Serializable> {
 	}
 	
 	
+	@Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
+//	@Override
+	public List<?> findAll() {
+		// TODO Auto-generated method stub
+		return hibernateUtil.findAll();
+	}
 	
 
 }

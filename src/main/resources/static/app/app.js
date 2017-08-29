@@ -10,7 +10,11 @@ app.config(['$routeProvider',
           controller: 'loginController'
         })
         //para acessar as páginas da rota do angular deve conter /#/ na url, exemplo: "localhost:8084/courier/#/admin/produto"
-         .when('/admin/produto', {
+          .when('/admin/', {
+          templateUrl: 'app/view/inicio/inicio.html',
+          controller: 'inicioController'
+        }) 
+        .when('/admin/produto', {
           templateUrl: 'app/view/produto/listar-produto.html',
           controller: 'produtoController'
         })
